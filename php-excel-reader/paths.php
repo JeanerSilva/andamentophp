@@ -1,4 +1,4 @@
 	<?php
-    $DivcolPath = ".\\tabelas\\"; //informar o caminho na intranet
+    $DivcolPath = ".\\tabelas\\"; // \COLICON\DIVCOL\Fracao\COMPRAS\PLANILHA...
     $DivconPath = ".\\tabelas\\";
   ?>

@@ -38,6 +38,12 @@ header .container:before{
 	margin: 0 auto;
 }
 
+.processo1 {
+	background-color: #AAA;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 section{
 	margin: 2em 0;
 	overflow: hidden;
@@ -62,6 +68,8 @@ td, th {
 	margin: 0;
 	border: 1px solid #ccc;
 	text-align: left;
+	word-wrap: break-word;
+	white-space: pre-wrap;
 }
 
 th{
@@ -76,7 +84,7 @@ label{
 }
 
 #filtrar-tabela {
-	width: 200px;
+	width: 500px;
 	height: 35px;
 	margin-bottom: 10px;
 }
@@ -87,4 +95,15 @@ label{
 
 .concluido {
 	color:blue;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
 }
