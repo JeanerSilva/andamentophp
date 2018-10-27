@@ -2,12 +2,18 @@
 	box-sizing: border-box;
  }
 
-body{
+body {
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
 
-header{
+a {
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+}
+
+
+header {
 	background-color: #333;
 	height: 4em;
 	color: #FFF;
@@ -19,11 +25,14 @@ header h1{
 	display:inline-block;
 	vertical-align:	middle;
 }
-header h2{
+
+header h2 {
 	font-size: 2em;
 	display:inline-block;
 	vertical-align:	middle;
 }
+
+
 
 header .container:before{
 	content: '';
@@ -111,7 +120,8 @@ label{
 	color:blue;
 }
 
-button{
+
+button, .input1 {
 	padding: .5em 2em;
 	border: 0;
 	border-bottom: 3px solid;

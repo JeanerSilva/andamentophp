@@ -1,8 +1,13 @@
 var campoFiltro = document.querySelector("#filtrar-tabela");
 
-campoFiltro.addEventListener("input", function() {
+var campoFiltroValue = document.getElementById("filtrar-tabela").value;
+campoFiltro.addEventListener("input", filtrafunction(campoFiltroValue));
+
+function filtrafunction (value) {
+  console.log("filtrado");
+  console.log("Value: " + value);
     var processos = document.querySelectorAll(".processos");
-    if (this.value.length > 0) {
+    if (value.length > 0) {
         for (var i = 0; i < processos.length; i++) {
             var processo = processos[i];
             var tdProcesso1 = processo.querySelector(".processo1");
@@ -11,30 +16,24 @@ campoFiltro.addEventListener("input", function() {
             var tdProcesso4 = processo.querySelector(".processo4");
             var tdProcesso5 = processo.querySelector(".processo5");
             var tdProcesso6 = processo.querySelector(".processo6");
-            //var tdProcesso7 = processo.querySelector(".processo7");
             var nome1 = tdProcesso1.textContent;
             var nome2 = tdProcesso2.textContent;
             var nome3 = tdProcesso3.textContent;
             var nome4 = tdProcesso4.textContent;
             var nome5 = tdProcesso5.textContent;
             var nome6 = tdProcesso6.textContent;
-            //var nome7 = tdProcesso7.textContent;
-            var expressao = new RegExp(this.value, "i");
+            var expressao = new RegExp(value, "i");
             if ( expressao.test(nome1)
               || expressao.test(nome2)
               || expressao.test(nome3)
-            //  || !nome4.includes("oculto")
               || expressao.test(nome4)
               || expressao.test(nome5)
               || expressao.test(nome6)
-            //  || expressao.test(nome7)
             ) {
                 processo.classList.remove("invisivel");
             } else {
                 processo.classList.add("invisivel");
             }
-
-
         }
     } else {
         for (var i = 0; i < processos.length; i++) {
@@ -42,4 +41,4 @@ campoFiltro.addEventListener("input", function() {
             processo.classList.remove("invisivel");
         }
     }
-});
+}
