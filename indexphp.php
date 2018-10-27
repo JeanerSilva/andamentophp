@@ -68,7 +68,8 @@
 								echo "</td><td class=\"processo7\">"; print_r($Row[6]); //subfase
 								echo "</td><td class=\"processo6\">"; print_r($Row[7]);
 									echo "<div id=\"myProgress\"><div id=\"myBar\"></div></div>"; //fase
-              	echo "</td><td class=\"processo2\">"; print_r($Row[4]); //modalidade
+
+								echo "</td><td class=\"processo2\">"; print_r($Row[4]); //modalidade
 								echo "</td><td class=\"processo3\">"; print_r($Row[0]); //responsável
 
 
