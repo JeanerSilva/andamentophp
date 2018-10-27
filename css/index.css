@@ -39,7 +39,7 @@ header .container:before{
 }
 
 .processo1 {
-	background-color: #AAA;
+	background-color: #EEE;
 	font-size: 18px;
 	font-weight: bold;
 }
@@ -72,6 +72,20 @@ td, th {
 	white-space: pre-wrap;
 }
 
+.bar-pale-red {
+	color:#000!important;
+	background-color:#ffdddd!important
+}
+
+.bar-green {
+	color:#fff!important;
+	background-color:#4CAF50!important
+}
+
+.bar-center {
+	text-align:center!important
+}
+
 th{
 	font-weight: bold;
 	background-color: #EEE;
@@ -97,13 +111,7 @@ label{
 	color:blue;
 }
 
-#myProgress {
-  width: 100%;
-  background-color: #ddd;
-}
-
-#myBar {
-  width: 1%;
-  height: 30px;
-  background-color: #4CAF50;
+.w3-light-grey {
+	color:#000!important;
+	background-color:#f1f1f1!important
 }
