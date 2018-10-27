@@ -23,6 +23,7 @@ campoFiltro.addEventListener("input", function() {
             if ( expressao.test(nome1)
               || expressao.test(nome2)
               || expressao.test(nome3)
+            //  || !nome4.includes("oculto")
               || expressao.test(nome4)
               || expressao.test(nome5)
               || expressao.test(nome6)
@@ -32,12 +33,13 @@ campoFiltro.addEventListener("input", function() {
             } else {
                 processo.classList.add("invisivel");
             }
+
+
         }
     } else {
         for (var i = 0; i < processos.length; i++) {
             var processo = processos[i];
             processo.classList.remove("invisivel");
-
         }
     }
 });
