@@ -45,8 +45,10 @@
 			<label for="filtrar-tabela">Filtrar:</label>
 			<input type="text" name="filtro"
 			id="filtrar-tabela" placeholder="Informe o termo a ser filtrado (em qualquer campo)">
-
-
+			<!--
+			<button id="ocultar" class="botao bto-principal">Ocultar Conluídos</button>
+			<button id="limpar" class="botao bto-principal">Retirar filtros</button>
+			-->
 		<?php
 			if ($TabelaTipo == "divcol") {
         	echo "<table id=\"tabela\"><tr id=\"cabecalho\">";
@@ -170,5 +172,6 @@
 
 	   ?>
 	<script src="js/filtra.js" ></script>
+	<script src="js/comandos.js" ></script>
 	</body>
 </html>
