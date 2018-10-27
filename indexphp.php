@@ -60,7 +60,7 @@
         	echo "</tr>";
         	foreach ($Spreadsheet as $Key => $Row) {
 
-						$Concluido = strcasecmp($Row[7], "concluído");
+						$Concluido = strcasecmp($Row[7], "Envio à DIVCON");
 						$Arquivado = strcasecmp($Row[7], "arquivado");
 						if ($Oculta == "false" || $Arquivado != 0 && $Oculta == "true")	{
 						if ($Oculta == "false" || $Concluido != 0 && $Oculta == "true")	{
@@ -83,9 +83,9 @@
 								echo "</td><td class=\"processo2\">"; print_r($Row[2]); //objeto
 								echo "</td><td class=\"processo3\">"; print_r($Row[3]); //Requisitante
 								echo "</td><td class=\"processo4\">";
-									echo "<strong> MODALIDADE: </strong>"; print_r($Row[4]);
-									echo "<strong>. FASE ATUAL: </strong>"; print_r($Row[7]);
-									if ((strcasecmp($Row[7], "Concluído") == 0) || (strcasecmp($Row[7], "Envio à DIVCON") == 0)) {
+									echo "MODALIDADE: <strong>"; print_r($Row[4]);
+									echo "</strong>. FASE ATUAL: <strong>"; print_r($Row[7]);echo "</strong>";
+									if (strcasecmp($Row[7], "Envio à DIVCON") == 0) {
 										echo "<a href='indexphp.php?filtro="; print_r($Row[1]);
 										echo "&tabela=divcon&oculta=false'> Abrir processo na DIVCON </a>";
 								  }
@@ -96,7 +96,7 @@
 									print_r($Percentagem);
 									echo"</strong></div>";
 											echo "</div>";
-									echo "<br><strong>Andamentos: </strong><br>";
+									echo "<br><strong>Histórico: </strong><br>";
 									print_r($Row[6]);
 								echo "</td><td class=\"processo6\">"; print_r($Row[5]); //numero
 								echo "</td><td class=\"processo5\">"; print_r($Row[0]); //responsável
