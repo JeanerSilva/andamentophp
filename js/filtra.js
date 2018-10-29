@@ -4,8 +4,6 @@ var campoFiltroValue = document.getElementById("filtrar-tabela").value;
 campoFiltro.addEventListener("input", filtrafunction(campoFiltroValue));
 
 function filtrafunction (value) {
-  console.log("filtrado");
-  console.log("Value: " + value);
     var processos = document.querySelectorAll(".processos");
     if (value.length > 0) {
         for (var i = 0; i < processos.length; i++) {

@@ -28,20 +28,22 @@
 
 			<?php
 					if ($TabelaTipo == "divcon")
-						echo "<a class=\"classe1\" href='indexphp.php?filtro=&tabela=divcol&oculta=false'> Acessar Tabela DIVCOL </a>";
+						echo "<a class=\"classe1\" href=\"indexphp.php?filtro=&tabela=divcol&oculta=false\"> 
+						Acessar Tabela DIVCOL </a>";
 					if ($TabelaTipo == "divcol")
-						echo "<a class=\"classe1\" href='indexphp.php?filtro=&tabela=divcon&oculta=false'> Acessar Tabela DIVCON </a>";
+						echo "<a class=\"classe1\" href=\"indexphp.php?filtro=&tabela=divcon&oculta=false\"> 
+						Acessar Tabela DIVCON </a>";
 			?>
 			<form action="indexphp.php" method="get">
 				<input type="text" name="filtro" value="<?= $Filtro ?>"
 			 id="filtrar-tabela" placeholder="Informe o termo a ser filtrado (em qualquer campo)">
-			 <button id="filtrar" class="botao bto-principal" >Filtrar</button>
-			 <button id="limpar" class="botao bto-principal">Mostrar todos</button>
+			 <button id="filtrar" class="btn-primary" >Filtrar</button>
+			 <button id="limpar" class="btn-primary">Mostrar todos</button>
 			  <input type="hidden" id="tabela" name="tabela" value="<?= $TabelaTipo ?>">
 				<input type="hidden" id="oculta" name="oculta" value="true">
 				<?php
 					if ($Oculta == "false") {
-						echo "<input class=\"input1\" type=\"submit\" value=\"Ocultar processos concluídos na ";
+						echo "<input class=\"input1 btn-primary\" type=\"submit\" value=\"Ocultar processos concluídos na ";
 						echo strtoupper($TabelaTipo);
 						echo "\">";
 					}
@@ -86,9 +88,11 @@
 									echo "MODALIDADE: <strong>"; print_r($Row[4]);
 									echo "</strong>. FASE ATUAL: <strong>"; print_r($Row[7]);echo "</strong>";
 									if (strcasecmp($Row[7], "Envio à DIVCON") == 0) {
-										echo "<a href='indexphp.php?filtro="; print_r($Row[1]);
-										echo "&tabela=divcon&oculta=false'> Abrir processo na DIVCON </a>";
-								  }
+										echo "<button class=\"btn-small\" onclick=\"";
+										echo "window.location = 'indexphp.php?filtro="
+    									. $Row[1] . "&tabela=divcon&oculta=false'";
+										echo "\" id=\"divcon\">Abrir na DIVCON</button>";
+								  	}
 									echo "<div class=\"bar-pale-red\">";
 									echo "<div class=\"bar-green bar-center\" style=\"width:";
 									print_r($Percentagem);
@@ -166,6 +170,12 @@
 	   ?>
 	<script src="js/filtra.js" ></script>
 	<script src="js/comandos.js" ></script>
+	<script> 
+			function callDivcon (filtro) {
+				window.location = "indexphp.php?filtro="
+    			+ filtro + "&tabela=divcon&oculta=false";
+			}
+	</script>
 	</body>
 </html>
 
