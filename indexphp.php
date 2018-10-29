@@ -18,34 +18,39 @@
 			$Spreadsheet = new SpreadsheetReader($Filepath);
 		?>
 
-	<header>
-			<div class="container">
+		<header>
+			<div class="container" id="barra">
 				<?php echo "<h2>"; echo "PROCESSOS " . strtoupper($TabelaTipo);  echo "</h2>";
+								if ($TabelaTipo == "divcon") {
+									echo "<button class=\"btn-small\" onclick=\"";
+									echo "window.location = 'indexphp.php?filtro=&tabela=divcol&oculta=false'";
+									echo "\" id=\"divcon\">Tabela DIVCOL</button>";
+								}
+									if ($TabelaTipo == "divcol") {
+									echo "<button class=\"btn-small\" onclick=\"";
+									echo "window.location = 'indexphp.php?filtro=&tabela=divcon&oculta=false'";
+									echo "\" id=\"divcon\">Tabela DIVCON</button>";
+								}
+				
+				
 				?>
 			</div>
 		</header>
 		<main>
 
 			<?php
-					if ($TabelaTipo == "divcon")
-						echo "<a class=\"classe1\" href=\"indexphp.php?filtro=&tabela=divcol&oculta=false\"> 
-						Acessar Tabela DIVCOL </a>";
-					if ($TabelaTipo == "divcol")
-						echo "<a class=\"classe1\" href=\"indexphp.php?filtro=&tabela=divcon&oculta=false\"> 
-						Acessar Tabela DIVCON </a>";
+
 			?>
-			<form action="indexphp.php" method="get">
+			<form action="indexphp.php" method="get" id="menu">
 				<input type="text" name="filtro" value="<?= $Filtro ?>"
 			 id="filtrar-tabela" placeholder="Informe o termo a ser filtrado (em qualquer campo)">
-			 <button id="filtrar" class="btn-primary" >Filtrar</button>
-			 <button id="limpar" class="btn-primary">Mostrar todos</button>
+			 <button id="filtrar" class="btn-primary " >Filtrar</button>
+			 <button id="limpar" class="btn-primary">Limpar</button>
 			  <input type="hidden" id="tabela" name="tabela" value="<?= $TabelaTipo ?>">
 				<input type="hidden" id="oculta" name="oculta" value="true">
 				<?php
 					if ($Oculta == "false") {
-						echo "<input class=\"input1 btn-primary\" type=\"submit\" value=\"Ocultar processos concluídos na ";
-						echo strtoupper($TabelaTipo);
-						echo "\">";
+						echo "<input class=\"input1 btn-primary\" type=\"submit\" value=\"Ocultar concluídos\">";
 					}
 				 ?>
 			</form>
@@ -57,7 +62,7 @@
 					echo "<th>Objeto</th>";
 					echo "<th>Requisitante</th>";
         	echo "<th>Andamento</th>";
-					echo "<th>Nº Pregão / Dispensa / Inex</th>";
+					echo "<th>Nº </th>";
 					echo "<th>Responsável</th>";
         	echo "</tr>";
         	foreach ($Spreadsheet as $Key => $Row) {
