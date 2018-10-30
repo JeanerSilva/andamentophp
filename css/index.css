@@ -19,23 +19,30 @@ header {
     height: 35px;
 	color: #FFF;
 	margin-bottom: 0.3em;
+	background-color: #ccc;
+
 }
 
 #barra {
 	background-color: black;
+	color: #000;
 	position: fixed;
 	top: 0px;
 	right: 0;
-	height: 39px;
+	height: 40px;
   }
   
-
+#dados {
+	position: fixed;
+	top: 40px;
+	height: 180px;
+  }
   
 
   #menu {
     position: fixed;
 	top: 0px;
-	left: 400px;
+	left: 380px;
 	right: 0;
 	height: 35px;
   }
@@ -49,6 +56,7 @@ header h1{
 
 header h2 {
 	font-size: 20px;
+	color: white;
 	display:inline-block;
 	padding-top: 5px;
 	padding-left: 15px;
@@ -96,7 +104,7 @@ td, th {
 
 .bar-pale-red {
 	color:#000!important;
-	background-color:#ffdddd!important
+	background-color:#ffdddd!important;
 }
 
 
@@ -104,14 +112,20 @@ td, th {
 .bar-green {
 	color:#fff!important;
 	vertical-align: middle;
-	background-color:rgb(103, 168, 106)!important
+	background-color:rgb(103, 168, 106)!important;
 }
 
-
+.bar-blue-small {
+	color:#fff!important;
+	vertical-align: middle;
+	background-color:rgb(18, 14, 77)!important;
+	height: 16px;
+	display: inline-block;
+}
 
 .bar-center {
 	vertical-align: middle;
-	text-align:center!important
+	text-align:center!important;
 }
 
 th{
