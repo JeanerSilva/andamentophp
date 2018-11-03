@@ -118,7 +118,7 @@ td, th {
 .bar-blue-small {
 	color:#fff!important;
 	vertical-align: middle;
-	background-color:rgb(18, 14, 77)!important;
+	background-color:rgba(110, 197, 149, 0.63)!important;
 	height: 16px;
 	display: inline-block;
 }

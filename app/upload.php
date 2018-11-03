@@ -3,9 +3,9 @@
 // Nas versões do PHP anteriores a 4.1.0, $HTTP_POST_FILES deve ser utilizado ao invés
 // de $_FILES.
 
-require('php-excel-reader/paths.php');
+require('../app/paths.php');
 
-$uploaddir = $DivcolPath;
+$uploaddir = $UploadPath;
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 echo '<pre>';
