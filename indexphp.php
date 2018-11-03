@@ -58,11 +58,11 @@
 
 				<div class="topnav  container">
 				<a id="processo"
-					href="http://localhost/php/indexphp.php?filtro=&tabela=processo&oculta=false">DIVCOL+DIVCON</a>
+					href="indexphp.php?filtro=&tabela=processo&oculta=false">DIVCOL+DIVCON</a>
 				<a id="divcol"
-					href="http://localhost/php/indexphp.php?filtro=&tabela=divcol&oculta=false">DIVCOL</a>
+					href="indexphp.php?filtro=&tabela=divcol&oculta=false">DIVCOL</a>
 				<a id="divcon"
-					href="http://localhost/php/indexphp.php?filtro=&tabela=divcon&oculta=false">DIVCON</a>
+					href="indexphp.php?filtro=&tabela=divcon&oculta=false">DIVCON</a>
 				</div>
 			</div>
 		</header>
