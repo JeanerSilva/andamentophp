@@ -21,5 +21,24 @@ botaoFiltrar.addEventListener("click", function(event) {
 });
 
 
+var ocultarButton = document.querySelector("#ocultarButton");
+ocultarButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    var filtro = document.getElementById("filtrar-tabela").value;
+    document.getElementById("filtrar-tabela").value = "";
+    var tabela = document.getElementById("tabela").value;
+    var oculta = document.getElementById("oculta").value;
+
+    if (oculta=="false") {				
+        oculta="true";
+    } else {				
+        oculta="false";
+    }
+
+    console.log(oculta);
+    window.location = "indexphp.php?filtro="
+    + filtro + "&tabela=" + tabela + "&oculta=" + oculta;
+});
+
 
 

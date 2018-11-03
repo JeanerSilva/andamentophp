@@ -116,7 +116,8 @@ table{
 }
 
 .bar-fase {
-	color:#000!important;
+	color:#FFF!important;
+	vertical-align: middle;
 	margin-top: 15px;
 	font-size: 10px;
 	border: 1px solid black;

@@ -51,14 +51,7 @@
 			<input type="hidden" id="oculta" name="oculta" value="<?= $Oculta ?>">
 			<button id="filtrar" class="btn-primary" >Filtrar</button>
 			<button id="limpar" class="btn-primary">Limpar</button>
-			
-			
-			<label class="switch">
-				<input type="checkbox" checked id="ocultar"  onclick="myFunction()">
-				<span class="slider round"></span>
-			</label>
-			<h3 style="color: white; display:inline-block;"> Mostrar/Ocultar concluídos</h3>
-
+			<button id="ocultarButton" class="btn-primary">Ocultar</button>
 		</form>
 
 		<?php
@@ -68,36 +61,19 @@
 		<script src="js/filtra.js" ></script>
 		<script src="js/comandos.js" ></script>
 		<script> 
-		document.getElementById("filtrar-tabela").focus();
-		var oculta = document.getElementById("oculta").value;
-		var checkBox = document.getElementById("ocultar");
-		checkBox.checked = oculta;
-
-		function myFunction() {
-			var checkBox = document.getElementById("ocultar");
-			var tabela = document.getElementById("tabela").value;
-   			var oculta = document.getElementById("oculta").value;
-			var filtro = document.getElementById("filtrar-tabela").value;
-
+			document.getElementById("filtrar-tabela").focus();
+			var ocultarButton = document.querySelector("#ocultarButton");
+			var oculta = document.getElementById("oculta").value;
+			
 			if (oculta=="false") {				
-				oculta="true";
+				var mostrar = "Ocultar";
 			} else {				
-				oculta="false";
+				var mostrar = "Mostrar";
 			}
 
-			if (checkBox.checked == true){
-				var tabela = document.getElementById("tabela").value;
-				window.location = "indexphp.php?filtro="
-   					 + filtro + "&tabela=" + tabela + "&oculta=" + oculta;
-			} else {
-				window.location = "indexphp.php?filtro="
-    			+ filtro + "&tabela=" + tabela + "&oculta=" + oculta;
-				
-			}
-		}
-		</script>
+			ocultarButton.textContent = mostrar + " concluídos/arquivados";
 
-
-		
+	</script>
+	
 	</body>
 </html>

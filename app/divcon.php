@@ -1,45 +1,45 @@
 <?php
     echo "<div class='titulo'>TRÂMITE NA DIVCON</div>";
     echo "<table class= 'tabela' id='tabela'>";
-
-    $A1 = "Abertura";
-    $A2 = "Instrução inicial";
-    $A3 = "Elaboração de minutas";
-    $A4 = "Chefia da Divcon";
-    $A5 = "Enviado à ASJUR";
-    $A6 = "Retorno da ASJUR";
-    $A7 = "Análise pós ASJUR";
-    $A8 = "Declaração Orçamentária";
-    $A9 = "Enviado ao Administrativo";
-    $A10 = "Concluído";
+    /*
+        $A1 = "Abertura";
+        $A2 = "Instrução inicial";
+        $A3 = "Elaboração de minutas";
+        $A4 = "Chefia da Divcon";
+        $A5 = "Enviado à ASJUR";
+        $A6 = "Retorno da ASJUR";
+        $A7 = "Análise pós ASJUR";
+        $A8 = "Declaração Orçamentária";
+        $A9 = "Enviado ao Administrativo";
+        $A10 = "Concluído";
+    */
     
     foreach ($SpreadsheetDivcon as $Key => $Row) {
         if ($Row && $Key > 3) {
-           
-            if ($Oculta == "true" && (strcasecmp($Row[7], "Concluído") == 0 || strcasecmp($Row[7], "Arquivado") == 0)) {
+
+            if ($Key == 4) {               
+                $A1 = $Row[0];
+                $A2 = $Row[1];
+                $A3 = $Row[2];
+                $A4 = $Row[3];
+                $A5 = $Row[4];
+                $A6 = $Row[5];
+                $A7 = $Row[6];
+                $A8 = $Row[7];
+                $A9 = $Row[8];
+                $A10 = $Row[9];
                 goto fim;
-            }
-            echo "<tr class ='processos'>";
-
-            echo "<td><div class='bar-pale-red' style='position: relative;' >"; 
-            echo "<div class='bar-green bar-center' style='position: absolute; width:";print_r($Row[9]+3); 
-            echo "%'><strong>";  print_r($Row[9]); echo"%</strong></div>";
-            
-            echo "<div class='bar-fase bar-center' style='margin-left: 00%; width:10%; position: absolute;'>$A1</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 10%; width:10%; position: absolute;'>$A2</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 20%; width:10%; position: absolute;'>$A3</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 30%; width:10%; position: absolute;'>$A4</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 40%; width:10%; position: absolute;'>$A5</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 50%; width:10%; position: absolute;'>$A6</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 60%; width:10%; position: absolute;'>$A7</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 70%; width:10%; position: absolute;'>$A8</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 80%; width:10%; position: absolute;'>$A9</div>";
-            echo "<div class='bar-fase bar-center' style='margin-left: 90%; width:10%; position: absolute;'>$A10</div>";
-
-            echo "<br></div></td>";
-
+           } 
            
-            /////////
+            if ($Row[7] 
+                && $Oculta == "true" 
+                && (strcasecmp($Row[7], "Concluído") == 0 || strcasecmp($Row[7], "Arquivado") == 0)) 
+                goto fim;
+
+            echo "<tr class ='processos'>";
+            
+            require('app/barra.php');   
+
             echo "<td class='processo4' ><div style='left: 0%; width:100%;  float: right;'>";
 
             echo "<div id='divteste' style='left: 0%; width:30%; float: left;'>";
