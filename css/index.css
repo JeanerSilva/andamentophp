@@ -79,13 +79,11 @@ header h2 {
 	height: 100%;
 }
 
-.processo1 {
-	font-size: 16px;
-	font-weight: bold;
+.destaque {
+	color: green;
 }
 
-
-section{
+section {
 	margin: 2em 0;
 	overflow: hidden;
 }
@@ -94,7 +92,7 @@ section h2{
 	font-size: 3em;
 	display: block;
 	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid rgb(204, 204, 204);
 	margin-bottom: .5em;
 }
 

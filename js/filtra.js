@@ -14,12 +14,16 @@ function filtrafunction (value) {
             var tdProcesso4 = processo.querySelector(".processo4");
             var tdProcesso5 = processo.querySelector(".processo5");
             var tdProcesso6 = processo.querySelector(".processo6");
+            var tdProcesso7 = processo.querySelector(".processo7");
+            var tdProcesso8 = processo.querySelector(".processo8");
             var nome1 = tdProcesso1.textContent;
             var nome2 = tdProcesso2.textContent;
             var nome3 = tdProcesso3.textContent;
             var nome4 = tdProcesso4.textContent;
             var nome5 = tdProcesso5.textContent;
             var nome6 = tdProcesso6.textContent;
+            var nome7 = tdProcesso7.textContent;
+            var nome8 = tdProcesso8.textContent;
             var expressao = new RegExp(value, "i");
             if ( expressao.test(nome1)
               || expressao.test(nome2)
@@ -27,6 +31,8 @@ function filtrafunction (value) {
               || expressao.test(nome4)
               || expressao.test(nome5)
               || expressao.test(nome6)
+              || expressao.test(nome7)
+              || expressao.test(nome8)
             ) {
                 processo.classList.remove("invisivel");
             } else {

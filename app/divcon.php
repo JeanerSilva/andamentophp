@@ -34,15 +34,31 @@
 
         echo "<br></div></td>";
 
-            echo "<td class='processo1'>Processo / ata / Contrato: ";       print_r($Row[3]); echo "</td>";
-            echo "<td class='processo4'><strong>Andamentos: </strong>";     print_r($Row[6]); echo "</td>";
-            echo "<td class='processo2'><strong>Objetivo: </strong>";       print_r($Row[5]); echo "</td>";
-            echo "<td class='processo6'><strong>Fase atual: </strong>";     print_r($Row[7]); echo "</td>";
-            echo "<td class='processo6'><strong>Origem: </strong>";         print_r($Row[4]); echo "</td>";
-            echo "<td class='processo3'><strong>Objeto: </strong>";         print_r($Row[2]); echo "</td>";
-            echo "<td class='processo5'><strong>Empresa: </strong>";        print_r($Row[1]); echo "</td>";
-            echo "<td class='processo2'><strong>Responsável: </strong>";    print_r($Row[0]); echo "</td>";
-            echo "</tr>";
+           
+            /////////
+            echo "<td class='processo4' ><div style='left: 0%; width:100%;  float: right;'>";
+
+            echo "<div id='divteste' style='left: 0%; width:30%; float: left;'>";
+                echo "<div class='processo1'>Processo / ata / Contrato: <strong>"; print_r($Row[3]); echo "</strong></div>";
+                echo "<div class='processo8'>Objetivo: <strong>"; print_r($Row[5]); echo "</strong></div>";
+                echo "<div class='processo7'>Fase atual: <strong>"; print_r($Row[7]); echo "</strong></div>";
+                echo "<div class='processo6' style='color: rgb(44, 7, 253);'>Origem: <strong>"; print_r($Row[4]); echo "</strong></div>";
+                echo "<div class='processo3'>Objeto: <strong>"; print_r($Row[2]); echo "</strong></div>";
+                echo "<div class='processo5'>Empresa: <strong>"; print_r($Row[1]); echo "</strong></div>";
+                echo "<div class='processo2'>Responsável: <strong>"; print_r($Row[0]); echo "</strong></div>";
+
+            echo "</div>";
+
+            echo "<div id='divteste' style='left: 50%; width:70%; float: left;'>";             
+             echo "<strong>Andamentos: </strong><br>"; print_r($Row[6]); 
+            echo "</div>";
+
+            echo "</div></td>";
+
+
+
+
+
         }        
     }
    echo "</table>";
