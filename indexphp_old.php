@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<title>Projeto Colicon</title>
 	</head>
 	<meta >
 	<body>
@@ -53,17 +52,24 @@
 		<header>
 			<div class="container" id="barra">
 
-			<input type="hidden" id="tabela" name="tabela" value="<?= $TabelaTipo ?>">
-			<input type="hidden" id="oculta" name="oculta" value="<?= $Oculta ?>">
 
-				<div class="topnav  container">
-				<a id="processo"
-					href="http://localhost/php/indexphp.php?filtro=&tabela=processo&oculta=false">DIVCOL+DIVCON</a>
-				<a id="divcol"
-					href="http://localhost/php/indexphp.php?filtro=&tabela=divcol&oculta=false">DIVCOL</a>
-				<a id="divcon"
-					href="http://localhost/php/indexphp.php?filtro=&tabela=divcon&oculta=false">DIVCON</a>
-				</div>
+
+				<?php 
+					echo "<button class='btn-small' onclick=\"";
+					echo "window.location = 'indexphp.php?filtro=&tabela=processo&oculta=false'";
+					echo "\" >DIVCOL+DIVCON</button>";
+					echo "<button class='btn-small' onclick=\"";
+					echo "window.location = 'indexphp.php?filtro=&tabela=divcol&oculta=false'";
+					echo "\" >DIVCOL</button>";					
+					echo "<button class='btn-small' onclick=\"";
+					echo "window.location = 'indexphp.php?filtro=&tabela=divcon&oculta=false'";
+					echo "\" >DIVCON</button>";
+
+				
+					$Valor = $TabelaTipo;
+					if ($Valor == 'processo')  $Valor = 'DIVCOL+DIVCON';
+					echo "<h2>"; echo "PROCESSOS: " . strtoupper($Valor);  echo "</h2>";
+				?>
 			</div>
 		</header>
 
@@ -74,7 +80,8 @@
 		<form action="indexphp.php" method="get" id="menu">
 			<input type="text" name="filtro" value="<?= $Filtro ?>"
 			id="filtrar-tabela" placeholder="Pesquisa em qualquer campo">
-
+			<input type="hidden" id="tabela" name="tabela" value="<?= $TabelaTipo ?>">
+			<input type="hidden" id="oculta" name="oculta" value="<?= $Oculta ?>">
 			<button id="filtrar" class="btn-primary" >Filtrar</button>
 			<button id="limpar" class="btn-primary">Limpar</button>
 			<button id="ocultarButton" class="btn-primary">Ocultar</button>
@@ -105,12 +112,6 @@
 			var help = document.querySelector("#help");
 			var helpDiv = document.querySelector("#divFlutuante");			
 			if (help.value == "help") helpDiv.classList.remove("invisivel");
-			
-			var tabela = document.getElementById("tabela").value;
-
-			var menubar = document.querySelector("#"+tabela);			
-			menubar.classList.add("active");
-
 	</script>
 	
 	</body>
