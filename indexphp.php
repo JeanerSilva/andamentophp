@@ -70,8 +70,6 @@
 			</div>
 		</header>
 
-
-
 		<form action="indexphp.php" method="get" id="menu">
 			<input type="text" name="filtro" value="<?= $Filtro ?>"
 			id="filtrar-tabela" placeholder="Pesquisa em qualquer campo">
@@ -104,13 +102,9 @@
 			}
 
 			ocultarButton.textContent = mostrar + " concluídos";
-
 			var help = document.querySelector("#help");
-			var helpDiv = document.querySelector("#divFlutuante")
-			
+			var helpDiv = document.querySelector("#divFlutuante");			
 			if (help.value == "help") helpDiv.classList.remove("invisivel");
-		
-
 	</script>
 	
 	</body>

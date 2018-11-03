@@ -24,7 +24,7 @@
                 echo "<div class='processo1'>Processo / ata / Contrato: <strong class='processo2'>$Processo</strong></div>";
                 echo "<div class='processo8'>Objetivo: <strong>$Row[5]</strong></div>";
                 echo "<div class='processo7'>Fase atual: <strong>$Row[7]</strong></div>";
-                echo "<div class='processo6'>Origem: <strong style='color: rgb(44, 7, 253); font-size:15px;'>$Row[4]</strong></div>";
+                echo "<div class='processo6'>Origem: <strong style='color: #007bff; font-size:15px;'>$Row[4]</strong></div>";
                 echo "<div class='processo3'>Objeto: <strong>$Row[2]</strong></div>";
                 echo "<div class='processo5'>Empresa: <strong>$Row[1]</strong></div>";
                 echo "<div class='processo1'>Responsável: <strong>$Row[0]</strong></div>";

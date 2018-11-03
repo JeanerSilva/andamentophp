@@ -25,7 +25,7 @@
                     echo "<div class='processo1' >Processo: <strong class='processo2'>$Processo</strong></div>";
                     echo "<div class='processo8'>Modalidade: <strong>$Row[4]</strong></div>";
                     echo "<div class='processo7'>Fase atual: <strong>$Row[7]</strong></div>";
-                    echo "<div class='processo6'>Origem: <strong style='color: rgb(44, 7, 253); font-size:15px;'>$Row[3]</strong></div>";
+                    echo "<div class='processo6'>Origem: <strong style='color: #007bff; font-size:15px;'>$Row[3]</strong></div>";
                     echo "<div class='processo3'>Objeto: <strong'>$Row[2]</strong></div>";
                     echo "<div class='processo5'>Pregão-ata-dispensa: <strong>$Row[5]</strong></div>";
                     echo "<div class='processo1'>Responsável: <strong>$Row[0]</strong></div>";
@@ -43,4 +43,3 @@
     }
     echo "</table>";
 ?>
-
