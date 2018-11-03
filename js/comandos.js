@@ -19,3 +19,7 @@ botaoFiltrar.addEventListener("click", function(event) {
     window.location = "indexphp.php?filtro="
     + filtro + "&tabela=" + tabela + "&oculta=" + oculta;
 });
+
+
+
+

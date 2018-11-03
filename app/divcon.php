@@ -15,6 +15,10 @@
     
     foreach ($SpreadsheetDivcon as $Key => $Row) {
         if ($Row && $Key > 3) {
+           
+            if ($Oculta == "true" && (strcasecmp($Row[7], "Concluído") == 0 || strcasecmp($Row[7], "Arquivado") == 0)) {
+                goto fim;
+            }
             echo "<tr class ='processos'>";
 
             echo "<td><div class='bar-pale-red' style='position: relative;' >"; 
@@ -32,7 +36,7 @@
             echo "<div class='bar-fase bar-center' style='margin-left: 80%; width:10%; position: absolute;'>$A9</div>";
             echo "<div class='bar-fase bar-center' style='margin-left: 90%; width:10%; position: absolute;'>$A10</div>";
 
-        echo "<br></div></td>";
+            echo "<br></div></td>";
 
            
             /////////
@@ -57,7 +61,7 @@
 
 
 
-
+            fim:
 
         }        
     }

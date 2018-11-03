@@ -1,7 +1,7 @@
 <?php 
      echo "<div class='titulo'>TRÂMITE NA DIVCOL</div>";
     echo "<table class='tabela' id='tabela'>";
-
+    
      
         $A1 = "Abertura";
         $A2 = "Instrução inicial";
@@ -17,10 +17,17 @@
 
     foreach ($SpreadsheetDivcol as $Key => $Row) {
         if ($Row && $Key > 3) {
-            if ($Oculta == "false"
-            // || ($Oculta == "true" && strcasecmp($Row[7], "Concluído") != 0)
-            // strcasecmp($Row[7], "Concluído") != 0
-            ) {
+           
+            try {
+            $Status = $Row[7];
+            } catch (Exception $e) {
+
+            }
+            if ($Row[7] && $Oculta == "true" && (strcasecmp($Status, "Concluído") == 0 || strcasecmp($Status, "Arquivado") == 0)) {
+                goto fim;
+            }
+            
+
                 echo "<tr class ='processos'>";            
                 
                 echo "<td><div class='bar-pale-red' style='position: relative;' >"; 
@@ -61,7 +68,7 @@
                 echo "</div></td>";
 
                 echo "</tr>";
-            }	
+            fim:	
         }
     }
     echo "</table>";
