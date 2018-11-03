@@ -4,7 +4,7 @@ botaoLimpar.addEventListener("click", function(event) {
     var filtro = document.getElementById("filtrar-tabela").value;
     document.getElementById("filtrar-tabela").value = "";
     var tabela = document.getElementById("tabela").value;
-    window.location = "indexphp.php?filtro=&tabela=" + tabela + "&oculta=false";
+    window.location = "indexphp.php?filtro=&tabela=" + tabela;
 });
 
 
@@ -15,5 +15,5 @@ botaoFiltrar.addEventListener("click", function(event) {
     document.getElementById("filtrar-tabela").value = "";
     var tabela = document.getElementById("tabela").value;
     window.location = "indexphp.php?filtro="
-    + filtro + "&tabela=" + tabela + "&oculta=false";
+    + filtro + "&tabela=" + tabela;
 });

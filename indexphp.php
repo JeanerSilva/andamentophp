@@ -13,23 +13,34 @@
 			require('app/paths.php');
 			$TabelaTipo = $_GET['tabela'];
 			$Filtro = $_GET['filtro'];
-			$Filepath = $DivcolPath . "processos_" . $TabelaTipo . ".xlsm";
-			$Spreadsheet = new SpreadsheetReader($Filepath);
+			
+			$FileDivcolPath = $DivcolPath . "processos_divcol.xlsm";
+			$SpreadsheetDivcol = new SpreadsheetReader($FileDivcolPath);
+
+			$FileDivconPath = $DivcolPath . "processos_divcon.xlsm";
+			$SpreadsheetDivcon = new SpreadsheetReader($FileDivconPath);
+
+
 		?>
 
 		<header>
 			<div class="container" id="barra">
-				<?php echo "<h2>"; echo "PROCESSOS " . strtoupper($TabelaTipo);  echo "</h2>";
-					if ($TabelaTipo == "divcon") {
-						echo "<button class=\"btn-small\" onclick=\"";
-						echo "window.location = 'indexphp.php?filtro=&tabela=divcol'";
-						echo "\" id=\"divcon\">Tabela DIVCOL</button>";
-					}
-						if ($TabelaTipo == "divcol") {
-						echo "<button class=\"btn-small\" onclick=\"";
-						echo "window.location = 'indexphp.php?filtro=&tabela=divcon'";
-						echo "\" id=\"divcon\">Tabela DIVCON</button>";
-					}				
+				<?php 
+					echo "<button class='btn-small' onclick=\"";
+					echo "window.location = 'indexphp.php?filtro=&tabela=processo'";
+					echo "\" >DIVCOL + DIVCON</button>";
+
+					echo "<button class='btn-small' onclick=\"";
+					echo "window.location = 'indexphp.php?filtro=&tabela=divcol'";
+					echo "\" >Tabela DIVCOL</button>";
+					
+					echo "<button class='btn-small' onclick=\"";
+					echo "window.location = 'indexphp.php?filtro=&tabela=divcon'";
+					echo "\" >Tabela DIVCON</button>";
+				
+					$Valor = $TabelaTipo;
+					if ($Valor == 'processo')  $Valor = 'DIVCOL + DIVCON';
+					echo "<h2>"; echo "PROCESSOS: " . strtoupper($Valor);  echo "</h2>";
 				?>
 			</div>
 		</header>
@@ -43,7 +54,7 @@
 		</form>
 
 		<?php
-			require('app/'.$TabelaTipo.'.php');	
+			require('app/'.$TabelaTipo.'.php');
 		?>
 		   
 		<script src="js/filtra.js" ></script>

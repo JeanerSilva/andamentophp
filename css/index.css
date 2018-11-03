@@ -15,6 +15,7 @@ a {
 }
 
 
+
 header {
     height: 35px;
 	color: #FFF;
@@ -42,7 +43,7 @@ header {
   #menu {
     position: fixed;
 	top: 0px;
-	left: 380px;
+	left: 830px;
 	right: 0;
 	height: 35px;
   }
@@ -63,6 +64,15 @@ header h2 {
 	margin-top: 0;
 }
 
+
+.titulo {
+	background-color: #CCC; 
+	font-size: 25px; 
+	font-weight: bold; 
+	width: 100%; 
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
 
 .container{
 	width: 100%;
@@ -89,8 +99,7 @@ section h2{
 
 table{
 	margin-bottom : .5em;
-    table-layout: fixed;
-
+	width: 100%;
 }
 
 td, th {
@@ -106,6 +115,7 @@ td, th {
 	color:#000!important;
 	background-color:#ffdddd!important;
 }
+
 
 
 
@@ -140,7 +150,7 @@ label{
 }
 
 #filtrar-tabela {
-	width: 500px;
+	width: 330px;
 	height: 35px;
 	margin-bottom: 3px;
 }
