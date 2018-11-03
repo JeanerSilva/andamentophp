@@ -12,6 +12,7 @@
 			require('php-excel-reader/SpreadsheetReader.php');
 			require('app/paths.php');
 			$TabelaTipo = $_GET['tabela'];
+			$Oculta = $_GET['oculta'];
 			$Filtro = $_GET['filtro'];
 			
 			$FileDivcolPath = $DivcolPath . "processos_divcol.xlsm";
@@ -19,23 +20,19 @@
 
 			$FileDivconPath = $DivcolPath . "processos_divcon.xlsm";
 			$SpreadsheetDivcon = new SpreadsheetReader($FileDivconPath);
-
-
 		?>
 
 		<header>
 			<div class="container" id="barra">
 				<?php 
 					echo "<button class='btn-small' onclick=\"";
-					echo "window.location = 'indexphp.php?filtro=&tabela=processo'";
+					echo "window.location = 'indexphp.php?filtro=&tabela=processo&oculta=false'";
 					echo "\" >DIVCOL + DIVCON</button>";
-
 					echo "<button class='btn-small' onclick=\"";
-					echo "window.location = 'indexphp.php?filtro=&tabela=divcol'";
-					echo "\" >Tabela DIVCOL</button>";
-					
+					echo "window.location = 'indexphp.php?filtro=&tabela=divcol&oculta=false'";
+					echo "\" >Tabela DIVCOL</button>";					
 					echo "<button class='btn-small' onclick=\"";
-					echo "window.location = 'indexphp.php?filtro=&tabela=divcon'";
+					echo "window.location = 'indexphp.php?filtro=&tabela=divcon&oculta=false'";
 					echo "\" >Tabela DIVCON</button>";
 				
 					$Valor = $TabelaTipo;
@@ -48,9 +45,11 @@
 		<form action="indexphp.php" method="get" id="menu">
 			<input type="text" name="filtro" value="<?= $Filtro ?>"
 			id="filtrar-tabela" placeholder="Informe o termo a ser filtrado (em qualquer campo)">
-			<button id="filtrar" class="btn-primary " >Filtrar</button>
-			<button id="limpar" class="btn-primary">Limpar</button>
 			<input type="hidden" id="tabela" name="tabela" value="<?= $TabelaTipo ?>">
+			<input type="hidden" id="oculta" name="oculta" value="<?= $Oculta ?>">
+			<button id="filtrar" class="btn-primary" >Filtrar</button>
+			<button id="limpar" class="btn-primary">Limpar</button>
+
 		</form>
 
 		<?php
@@ -60,9 +59,8 @@
 		<script src="js/filtra.js" ></script>
 		<script src="js/comandos.js" ></script>
 		<script> 
-			function callDivcon (filtro) {
-				window.location = "indexphp.php?filtro=" + filtro + "&tabela=divcon";
-			}
+		document.getElementById("filtrar-tabela").focus();
+
 		</script>
 	</body>
 </html>
