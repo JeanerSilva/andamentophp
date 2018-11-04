@@ -1,5 +1,5 @@
 <?php
-    echo "<div class='titulo'>TRÂMITE NA DIVCON</div>";
+    echo "<div class='tituloDivcon'>TRÂMITE NA DIVCON</div>";
     echo "<table class= 'tabela' id='tabela'>";
     foreach ($SpreadsheetDivcon as $Key => $Row) {
         if ($Row && $Key > 3) {
@@ -19,7 +19,7 @@
             $Processo = $Row[3];
             require('app/barra.php');   
 
-            echo "<td class='processo1' ><div style='left: 0%; width:100%;  float: right;'>";
+            echo "<td class='processo1 divcon' ><div style='left: 0%; width:100%;  float: right;'>";
                 echo "<div id='divteste' style='margin-left: 5%; width:30%; float: left;'>";               
                 echo "<div class='processo1'>Processo / ata / Contrato: <strong class='processo2'>$Processo</strong></div>";
                 echo "<div class='processo8'>Objetivo: <strong>$Row[5]</strong></div>";

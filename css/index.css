@@ -67,13 +67,22 @@ header h2 {
 }
 
 
-.titulo {
-	background-color: rgb(186, 196, 186); 
-	font-size: 15px; 
+
+
+.tituloDivcol {
+	background-color: rgb(223, 224, 231); 
+	font-size: 17px; 
 	font-weight: bold; 
 	width: 100%; 
 	text-align: center;
-	border-bottom: 1px solid #ccc;
+}
+
+.tituloDivcon {
+	background-color: rgb(230, 240, 240); 
+	font-size: 17px; 
+	font-weight: bold; 
+	width: 100%; 
+	text-align: center;
 }
 
 .container{
@@ -98,6 +107,20 @@ section h2{
 	margin-bottom: .5em;
 }
 
+
+
+.divcol {
+	background-color: rgb(240, 240, 240)!important; 
+	padding: 5px;
+	border-radius: 0.5rem;	
+}
+
+.divcon {
+	background-color: rgb(230, 230, 230)!important;
+	padding: 5px;	
+	border-radius: 0.5rem;	
+}
+
 table{
 	margin-bottom : .5em;
 	width: 100%;
@@ -109,13 +132,19 @@ table{
 	width: 100%;
 	font-size: 13px;
 	display: inline-block;
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px; 
+	padding-bottom: 00px;	
+
+
 }
 
 .processo4{
 	word-wrap: break-word;
 	white-space: pre-wrap;
 	display: block;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .processo2 {
@@ -126,13 +155,13 @@ table{
 
 
 .bar-fase {
-	color:#FFF!important;
+	color:rgb(255, 255, 255)!important;
 	vertical-align: middle;
-	top: 12.5px;
-	font-size: 12px;
-	border: 1px solid rgba(16, 122, 172, 0.747);
-	background-color:rgba(16, 122, 172, 0.747)!important;
-	height: 25px;
+	top: 2.5px;
+	font-size: 14px;
+
+	background-color:rgba(187, 230, 250, 0.212)!important;
+	height: 30px;
 	text-align:center;
 
 	line-height: 1;
@@ -153,20 +182,17 @@ table{
 .bar-green {
 	color:#fff!important;
 	vertical-align: middle;
-	background-color:rgb(75, 87, 105)!important;
-	top: 5px;
+	background-color:rgb(50, 94, 160)!important;
 	font-weight: bold;
-	height: 40px;
+	height: 35px;
 	border-radius: 0.5rem;
 }
 .bar-pale-red {
 	color:#000!important;
-	/*background-color:#aaa8bdf6!important;*/
-	height: 50px;
+	background-color:#e2e1e9f6!important;
+	height: 35px;
 	font-weight: bold;
-
-	line-height: 1.5;
-	border-radius: 0.55rem;
+	border-radius: 0.5rem;
 }
 
 
@@ -217,6 +243,10 @@ label{
 	color:blue;
 }
 
+.tabela {
+	padding: 0px;
+	border: 0px solid transparent;
+}
 
 
 button, #filtrar-tabela {
@@ -244,7 +274,7 @@ button, #filtrar-tabela {
 
 .btn-small {
 	color: #fff;
-	background-color: #31b0d5;;
+	background-color: #31b0d5;
 	border-color: #31b0d5;
 	padding: 0;
 	margin-top: -3px;

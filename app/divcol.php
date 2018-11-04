@@ -1,5 +1,5 @@
 <?php 
-    echo "<div class='titulo'>TRÂMITE NA DIVCOL</div>";
+    echo "<div class='tituloDivcol'>TRÂMITE NA DIVCOL</div>";
     echo "<table class='tabela' id='tabela'>";
 
     foreach ($SpreadsheetDivcol as $Key => $Row) {
@@ -19,14 +19,14 @@
                 $Processo = $Row[1];
                 require('app/barra.php');               
                 
-                echo "<td class='processo1' ><div style='left: 0%; width:100%;  float: right;'>";
+                echo "<td class='processo1 divcol' ><div style='left: 0%; width:100%;  float: right;'>";
                     
                 echo "<div id='divteste' style='margin-left: 5%; width:30%; float: left;'>";                     
                     echo "<div class='processo1' >Processo: <strong class='processo2'>$Processo</strong></div>";
                     echo "<div class='processo8'>Modalidade: <strong>$Row[4]</strong></div>";
                     echo "<div class='processo7'>Fase atual: <strong>$Row[7]</strong></div>";
                     echo "<div class='processo6'>Origem: <strong style='color: #007bff; font-size:15px;'>$Row[3]</strong></div>";
-                    echo "<div class='processo3'>Objeto: <strong'>$Row[2]</strong></div>";
+                    echo "<div class='processo3'>Objeto: <strong>$Row[2]</strong></div>";
                     echo "<div class='processo5'>Pregão-ata-dispensa: <strong>$Row[5]</strong></div>";
                     echo "<div class='processo1'>Responsável: <strong>$Row[0]</strong></div>";
                 echo "</div>";
