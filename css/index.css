@@ -127,7 +127,6 @@ table{
 }
 
 .processos, td, th, tr {
-	margin: 0;
 	text-align: left;
 	width: 100%;
 	font-size: 13px;
@@ -136,7 +135,7 @@ table{
 	padding-left: 0px;
 	padding-right: 3px; 
 	padding-bottom: 00px;	
-	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+	/* box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5); */
 
 }
 
@@ -145,6 +144,10 @@ table{
 	white-space: pre-wrap;
 	display: block;
 	font-size: 13px;
+}
+
+.processo9 {
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
 }
 
 .processo2 {
@@ -168,7 +171,6 @@ table{
 	text-align:center;
 	line-height: 1;
 	border-radius: 0.5rem;
-	/*width:9.5%; */
 	position: absolute;
 	display: flex;
 	align-items: center;	
@@ -182,7 +184,6 @@ table{
 	color:#fff!important;
 	vertical-align: middle;
 	background-color: #2c70b8b4;
-	font-weight: bold;
 	height: 35px;
 	border-radius: 0.5rem;
 	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
@@ -191,7 +192,6 @@ table{
 .bar-pale-red {
 	background-color:#fffffff6!important;
 	height: 35px;
-	font-weight: bold;
 	border-radius: 0.5rem;
 }
 

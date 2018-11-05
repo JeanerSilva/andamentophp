@@ -1,14 +1,6 @@
 <?php
-        $Lateral = 10;
-        $Percentual = ($Row[9] / 100) * ((100 - ($Lateral * 2)));
-        $T = ((100 - ($Lateral * 2)) / 10);
-        $W = $T - 0.5;
-        for ($x=0; $x < 10; $x++) {
-            $P[$x] = $Lateral + ($x * $T);  
-        }
-
     echo "<td><div class='bar-pale-red' style='position: relative;' >"; 
-        echo "<div class='bar-green bar-center' style='margin-left: $Lateral%; position: absolute; width:";
+        echo "<div class='bar-green bar-center' style='margin-left: 5%; position: absolute; width:";
             print_r($Percentual); echo "%'></div>";
         
             echo "<div class='bar-fase bar-center' style='width: $W%; margin-left:"; print_r($P[0]); echo "%'>$A1</div>";

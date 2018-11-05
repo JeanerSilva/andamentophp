@@ -23,11 +23,23 @@
                 
                 echo "<tr class ='processos'>";   
                 $Processo = $Row[1];
+
+                $Lateral = 5;
+                $Percentual = ($Row[9] / 100) * ((100 - ($Lateral * 2)));
+                $B = ((100 - ($Lateral * 2)) / 10);
+                $W = $B - 0.5;
+                for ($x=0; $x < 10; $x++) {
+                    $P[$x] = $Lateral + ($x * $B);  
+                }
+                $Esquerda = 30;
+                $Direita = 100 - ($Lateral *2);
+                $Andamento = 100 - $Esquerda;
                 require('app/barra.php');               
                 
-                echo "<td class='processo1 divcol' ><div style='left: 0%; width:100%;  float: right;'>";
+                echo "<td class='processo9 divcol' style='margin-left: 5%; width: $Direita%' >
+                <div style='width:100%;  float: right;'>";
                     
-                echo "<div id='divteste' style='margin-left: 10%; width:20%; float: left;'>";                     
+                echo "<div id='divteste' style='width:$Esquerda%; float: left;'>";                     
                     echo "<div class='processo1' >$T2: <strong class='processo2'>$Processo</strong></div>";
                     echo "<div class='processo8'>$T5: <strong>$Row[4]</strong></div>";                   
                     echo "<div class='processo6'>$T4: <strong>$Row[3]</strong></div>";
@@ -37,7 +49,7 @@
                     echo "<div >$T8: <strong class='processo7'>$Row[7]</strong></div>";
                 echo "</div>";
 
-                echo "<div class='processo4' id='divteste' style='width:60%; float: left;'>";             
+                echo "<div class='processo4' id='divteste' style='width:$Andamento%; float: right;'>";             
                  echo "<strong>$T7: </strong><br>$Row[6]</div>";
 
                 echo "</div></td>";
