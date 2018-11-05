@@ -183,7 +183,7 @@ table{
 .bar-green {
 	color:#fff!important;
 	vertical-align: middle;
-	background-color: #2c70b8b4;
+	background-color: rgba(0,0,0,0.9);
 	height: 35px;
 	border-radius: 0.5rem;
 	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
