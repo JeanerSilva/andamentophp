@@ -108,19 +108,18 @@ section h2{
 	margin-bottom: .5em;
 }
 
-
-
 .divcol {
-	background-color: rgb(240, 240, 240)!important; 
+	background-color: rgb(254, 254, 254)!important; 
 	padding: 5px;
 	border-radius: 0.5rem;	
 }
 
 .divcon {
-	background-color: rgb(230, 230, 230)!important;
+	background-color: rgb(253, 253, 253)!important;
 	padding: 5px;	
 	border-radius: 0.5rem;	
 }
+
 
 table{
 	margin-bottom : .5em;
@@ -159,43 +158,36 @@ table{
 }
 
 
-
 .bar-fase {
 	color:rgb(255, 255, 255)!important;
 	vertical-align: middle;
-	top: 2.5px;
+	margin-top: 2.5px;
 	font-size: 14px;
-
-	background-color:rgba(187, 230, 250, 0.212)!important;
+	background-color:rgba(117, 155, 173, 0.425)!important;
 	height: 30px;
 	text-align:center;
-
 	line-height: 1;
 	border-radius: 0.5rem;
-
 	width:9.5%; 
 	position: absolute;
-
-	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center;
 	align-items: center;	
-	-webkit-justify-content: center;
 	justify-content: center;
 	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.5); 
-		
+
 }
 
 
 .bar-green {
 	color:#fff!important;
 	vertical-align: middle;
-	background-color:rgb(50, 94, 160)!important;
+	background-color: #2c70b8b4;
 	font-weight: bold;
 	height: 35px;
 	border-radius: 0.5rem;
 	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
 }
+
 .bar-pale-red {
 	color:#000!important;
 	background-color:#e2e1e9f6!important;
@@ -203,8 +195,6 @@ table{
 	font-weight: bold;
 	border-radius: 0.5rem;
 }
-
-
 
 
 
@@ -427,6 +417,6 @@ button[disabled=disabled], button:disabled {
   }
   
   .topnav a.active {
-	background-color: rgb(0, 153, 255);
+	background-color: rgb(66, 135, 180);
 	color: white;
   }
