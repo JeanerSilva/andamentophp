@@ -110,6 +110,8 @@
 
 			var menubar = document.querySelector("#"+tabela);			
 			menubar.classList.add("active");
+			var campoFiltroValue = document.getElementById("filtrar-tabela").value;
+			filtrafunction (campoFiltroValue);
 
 	</script>
 	
