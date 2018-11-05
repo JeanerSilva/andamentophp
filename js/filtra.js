@@ -1,11 +1,9 @@
 var campoFiltro = document.querySelector("#filtrar-tabela");
 
 var campoFiltroValue = document.getElementById("filtrar-tabela").value;
-campoFiltro.addEventListener("input", filtrafunction(campoFiltroValue));
-
-function filtrafunction (value) {
+campoFiltro.addEventListener("input", function() {
     var processos = document.querySelectorAll(".processos");
-    if (value.length > 0) {
+    if (this.value.length > 0) {
         for (var i = 0; i < processos.length; i++) {
             var processo = processos[i];
             var tdProcesso1 = processo.querySelector(".processo1");
@@ -24,7 +22,7 @@ function filtrafunction (value) {
             var nome6 = tdProcesso6.textContent;
             var nome7 = tdProcesso7.textContent;
             var nome8 = tdProcesso8.textContent;
-            var expressao = new RegExp(value, "i");
+            var expressao = new RegExp(this.value, "i");
             if ( expressao.test(nome1)
               || expressao.test(nome2)
               || expressao.test(nome3)
@@ -45,4 +43,4 @@ function filtrafunction (value) {
             processo.classList.remove("invisivel");
         }
     }
-}
+});
