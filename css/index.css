@@ -168,7 +168,7 @@ table{
 	text-align:center;
 	line-height: 1;
 	border-radius: 0.5rem;
-	width:9.5%; 
+	/*width:9.5%; */
 	position: absolute;
 	display: flex;
 	align-items: center;	
@@ -189,8 +189,7 @@ table{
 }
 
 .bar-pale-red {
-	color:#000!important;
-	background-color:#e2e1e9f6!important;
+	background-color:#fffffff6!important;
 	height: 35px;
 	font-weight: bold;
 	border-radius: 0.5rem;

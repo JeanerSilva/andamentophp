@@ -27,7 +27,7 @@
                 
                 echo "<td class='processo1 divcol' ><div style='left: 0%; width:100%;  float: right;'>";
                     
-                echo "<div id='divteste' style='margin-left: 5%; width:30%; float: left;'>";                     
+                echo "<div id='divteste' style='margin-left: 10%; width:20%; float: left;'>";                     
                     echo "<div class='processo1' >$T2: <strong class='processo2'>$Processo</strong></div>";
                     echo "<div class='processo8'>$T5: <strong>$Row[4]</strong></div>";                   
                     echo "<div class='processo6'>$T4: <strong>$Row[3]</strong></div>";
@@ -37,7 +37,7 @@
                     echo "<div >$T8: <strong class='processo7'>$Row[7]</strong></div>";
                 echo "</div>";
 
-                echo "<div class='processo4' id='divteste' style='width:65%; float: left;'>";             
+                echo "<div class='processo4' id='divteste' style='width:60%; float: left;'>";             
                  echo "<strong>$T7: </strong><br>$Row[6]</div>";
 
                 echo "</div></td>";
